@@ -1,27 +1,2 @@
-¡Buenas noches Mica!
+ DESAFIO COMPLEMENTARIO 2 - ARRAYS
 
-Te dejo anotaciones en este ReadMe para no hacerlo tan largo en la descripcion de entrega.
-
-Desafió 1
-
-Voy a hacer una aplicación que lo que haga es:
-
-Cargar datos de:
-1) Nombre de la Empresa y cantidad de unidades a producir.
-2) Ingreso de numero de chasis.
-3) Seleccion de modelo a producir.
-4) Seleccion de distribucion de asientos.
-
-Al presionar terminar se debe dar una devolución final de los datos cargados como la siguiente: 
-
-(Te lo dejo por si queres copiar y pegar los datos que te pedira).
-
-## Su seleccion fue la siguiente ##
-Empresa: FlechaBus
-Cantidad de Unidades: 1
-Numero de chasis: 9BM634071 NB 261592
-Modelo: NEW ISIDRO
-Distribución: 48 Semicama + 12 Ejecutivo MIX
-Numero de asignación: 1255
-
-¡Saludos!
