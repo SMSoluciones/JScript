@@ -35,6 +35,7 @@ let total = 0;
 
 const seleccionModelo = () => { // Product Selection
     let referenciaId = Number(prompt(`## Bienvenido a la carga de Unidades NICCOLÓ ##
+    Max 5 unidades:
     1) Niccoló ISIDRO  MB O500RSD
     2) Niccoló ISIDRO  SC K400
     3) Niccoló AVANTI  MB M
