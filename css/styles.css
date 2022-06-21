@@ -1,0 +1,135 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.cuerpoEntero {
+    display: grid;
+    width: auto;
+    height: 700px;
+}
+
+    
+.fondoHeader { 
+    display: flex;
+    height: 600px;
+    grid-area: 1 / 1 / 4 / 6;
+    background-color: #4231bc;
+    justify-content:center
+}
+.fondoHeader h1{
+    color: white;
+    padding-top: 50px;
+    margin-left: 10%;
+}
+.fondoHeader img{
+    height: 80px;
+    padding-top: 50px;
+}
+.headerCuadro {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: 2 / 2 / 5 / 5;
+    grid-template-rows: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    filter:drop-shadow(20px 10px 20px #424242);
+    border: none;
+    
+}
+
+.imagenProducto img {
+    height: 400px;
+    padding: 5%;
+    margin-left: 2%;
+    justify-content: center;
+}
+
+.botoneraCuadro{
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+
+.botoneraCuadro button {
+    font-size: medium;
+    height: 50px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    display: flex;
+    background-color: #4231bc;
+    padding: 20px;
+    margin: 10px;
+;
+    border-radius: 10px;
+    border: none;
+}
+
+main{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.box_titulo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #4231bc;
+}
+
+.box_carga-padre{
+    display: flex;
+    background-color: rgb(232, 232, 232);
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.box_carga-hijo{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px;
+    width: 300px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.elemento_cargado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.elementos_cargado h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    height: 200px;
+    background-color: #4231bc;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10%;
+}
+footer img{
+    height: 100px;
+}
