@@ -14,11 +14,11 @@ const productos = [
     {id: 7, nombre: 'CENTO', chasis: 'Scania K310', horas: 100 },
 ];
 
-const sugeridos = document.getElementById('desafio');
+const unidades = document.getElementById('desafio');
 
-for (sugerido of productos) {
+for (unidad of productos) {
     const div = document.createElement('div');
     div.innerHTML = `
-    <button id="boton-1">${sugerido.nombre} ${sugerido.chasis}</button>`;
-    sugeridos.append(div);
+    <button id="boton-1">${unidad.nombre} ${unidad.chasis}</button>`;
+    unidades.append(div);
 }
