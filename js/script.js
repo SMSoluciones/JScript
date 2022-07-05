@@ -16,11 +16,45 @@ const usuarioIngresado = () => {
     apellidoDeUsuario == "" &&
     legajoDeUsuario == ""
   ) {
-    alert("Porfavor ingrese algun dato. Ingreso como invitado");
     login.innerHTML = `<h2>¡Bienvenido Invitado!</h2>`;
+
+    // Sweet Invitado
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
+    Toast.fire({
+      icon: "question",
+      title: "Ingreso como invitado",
+    });
   } else {
     login.innerHTML = `<h2>¡Bienvenido al sistema ${nombreDeUsuario} ${apellidoDeUsuario} su legajo es ${legajoDeUsuario}!</h2>`;
     registroLogin.push(legajoDeUsuario);
+
+    // Sweet Success
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Ingreso Correcto",
+    });
   }
   registroUsuarios();
 };
@@ -50,7 +84,10 @@ formulario.addEventListener("submit", (e) => {
   sessionStorage.setItem("nombreDeUsuario", nombre.value);
   sessionStorage.setItem("apellidoDeUsuario", apellido.value);
   sessionStorage.setItem("legajoDeUsuario", legajo.value);
+
   usuarioIngresado();
+
+  // Libreria
 });
 
 // Operador AND >>>> ENTREGA OPTIMIZANDO
@@ -107,8 +144,7 @@ const contenedorModelos = document.getElementById("modelo");
 const chasisCargados = document.getElementById("chasisCargados");
 const botonContinuar = document.querySelector(".botonSeguir");
 const masVendido = document.querySelector(".masVendido");
-
-masVendido.innerHTML = `El modelo mas vendido es:<b> ${a.modelo} ${a.chasis} </b>`;
+const seguirAceptar = document.querySelector("#continuarBoton");
 
 // Insercion de Lista
 
@@ -156,3 +192,9 @@ const colocarModelo = (producto) => {
   const traerArrayJson = JSON.parse(traerJSON);
   console.log(traerArrayJson); // Me devuelve un Array de objetos.
 };
+
+masVendido.innerHTML = `<b> El modelo mas vendido es:  ${a.modelo} ${a.chasis} </b>`;
+
+seguirAceptar.addEventListener("click", () => {
+  Swal.fire("Producto cargado", " ", "success");
+});
