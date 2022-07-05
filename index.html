@@ -20,10 +20,10 @@
             <input class="casillas" id="nombre" type="text" placeholder="Nombre">
             <input class="casillas" id="apellido" type="text" placeholder="Apellido">
             <input class="casillas" id="legajo" type="number" placeholder="Legajo">
-            <div><input class="boton_enviar" value="Enviar" type="submit"></div>
+            <div><input id="enviarPapi" class="boton_enviar" value="Enviar" type="submit"></div>
           </div>
           <div id="login"></div>
-        </div>
+        </div></form>
 
         <!--Recuadro de presentacion-->
         <div class="headerCuadro">
@@ -54,6 +54,18 @@
         </div>
         </div>
       </div>
+      <div class="box_carga-padre" id="chasisCargados"></div>
+
+      <!-- <div> -->
+      <div class="botonSeguir">
+        <button>CONTINUAR</button>
+      </div>
+
+      <div class="masVendido"></div>
+        <!-- <div class="volverElegir">
+          <button>VOLVER A ELEGIR</button>
+        </div>
+      </div> -->
 
     </main>
     <footer>
@@ -61,6 +73,7 @@
     </footer>
 
     <!--Scripts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

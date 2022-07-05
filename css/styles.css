@@ -62,7 +62,7 @@ h2 {
 
 .headerCuadro {
   height: 700px;
-  width: fit-content;
+  width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,7 +121,7 @@ main {
   background-color: rgb(232, 232, 232);
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 100px;
 }
 
 .box_carga-hijo {
@@ -130,8 +130,8 @@ main {
   background-color: white;
   margin: 20px;
   width: 900px;
-  margin-top: 30px;
-  height: fit-content;
+  margin-top: 100px;
+  height: 100px;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
@@ -162,3 +162,48 @@ footer {
 footer img {
   height: 100px;
 }
+
+.botonSeguir {
+  justify-content: center;
+  display: none;
+}
+.botonSeguir button {
+  background-color: #4231bc;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  height: 100px;
+  width: 200px;
+  color: white;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.masVendido {
+  display: flex;
+  font-size: 30px;
+  color: #4231bc;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+/* .volverElegir {
+  justify-content: center;
+  display: none;
+}
+
+.volverElegir button {
+  background-color: #4231bc;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  height: 100px;
+  width: 200px;
+  color: white;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 50px;
+} */
