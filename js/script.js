@@ -96,47 +96,21 @@ formulario.addEventListener("submit", (e) => {
   !!legajoDeUsuario &&
   usuarioIngresado();
 
-// Lista de Productos.
 
-const modelos = [
-  {
-    id: 1,
-    modelo: "New ISIDRO",
-    chasis: "Mercedes Benz O500",
-    image: "Imagen1",
-  },
-  {
-    id: 2,
-    modelo: "ISIDRO",
-    chasis: "Scania K400",
-    image: "Imagen2",
-  },
-  {
-    id: 3,
-    modelo: "AVANTI",
-    chasis: "Mercedes Benz M",
-    image: "Imagen3",
-  },
-  {
-    id: 4,
-    modelo: "AVANTI 15M",
-    chasis: "Mercedes Benz O500",
-    image: "Imagen4",
-  },
-  {
-    id: 5,
-    modelo: "CENTO",
-    chasis: "Mercedes Benz OF1721",
-    image: "Imagen4",
-  },
-];
+// Seleccion de contenedor
+const contenedorModelos = document.getElementById("modelo");
+const chasisCargados = document.getElementById("chasisCargados");
+const botonContinuar = document.querySelector(".botonSeguir");
+const masVendido = document.querySelector(".masVendido");
+const seguirAceptar = document.querySelector("#continuarBoton");
+
 
 // Unidad Cargada
 
 const unidadCargada = [];
 
 
-// Insertar Productos AJAX
+// Insertar Productos AJAX DESAFIO
 
 const insertarProductosAJAX = () => {
   fetch("./js/productos.json").then(respuesta => respuesta.json()).then(resultados => {
@@ -161,17 +135,6 @@ const insertarProductosAJAX = () => {
 }
 
 insertarProductosAJAX()
-
-// Desestructuracion de Arrays >>>> ENTREGA OPTIMIZANDO
-
-const [a, b, c, d, e] = modelos;
-
-// Seleccion de contenedor
-const contenedorModelos = document.getElementById("modelo");
-const chasisCargados = document.getElementById("chasisCargados");
-const botonContinuar = document.querySelector(".botonSeguir");
-const masVendido = document.querySelector(".masVendido");
-const seguirAceptar = document.querySelector("#continuarBoton");
 
 // Insercion en Box
 
@@ -201,8 +164,6 @@ const colocarModelo = (producto) => {
   const traerArrayJson = JSON.parse(traerJSON);
   console.log(traerArrayJson); // Me devuelve un Array de objetos.
 };
-
-masVendido.innerHTML = `<b> El modelo mas vendido es:  ${a.modelo} ${a.chasis} </b>`;
 
 seguirAceptar.addEventListener("click", () => {
   Swal.fire("Producto cargado", " ", "success");
