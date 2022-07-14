@@ -135,6 +135,33 @@ const modelos = [
 
 const unidadCargada = [];
 
+
+// Insertar Productos AJAX
+
+const insertarProductosAJAX = () => {
+  fetch("./js/productos.json").then(respuesta => respuesta.json()).then(resultados => {
+    // console.log(resultados) // Prueba
+    for (const producto of resultados) {
+      let contenedor = document.createElement("div");
+      contenedor.className = "producto-modelos";
+      contenedor.innerHTML = `
+    <button><div class="descripcion-producto">
+    <p> ${producto.modelo}</p>
+    ${producto.chasis}
+    </div></button>`;
+
+      contenedor.onclick = () => {
+        colocarModelo(producto);
+        unidadCargada.push(producto);
+      };
+
+      contenedorModelos.append(contenedor);
+    }
+  })
+}
+
+insertarProductosAJAX()
+
 // Desestructuracion de Arrays >>>> ENTREGA OPTIMIZANDO
 
 const [a, b, c, d, e] = modelos;
@@ -145,25 +172,6 @@ const chasisCargados = document.getElementById("chasisCargados");
 const botonContinuar = document.querySelector(".botonSeguir");
 const masVendido = document.querySelector(".masVendido");
 const seguirAceptar = document.querySelector("#continuarBoton");
-
-// Insercion de Lista
-
-for (const producto of modelos) {
-  let contenedor = document.createElement("div");
-  contenedor.className = "producto-modelos";
-  contenedor.innerHTML = `
-    <button><div class="descripcion-producto">
-    <p> ${producto.modelo}</p>
-    ${producto.chasis}
-    </div></button>`;
-
-  contenedor.onclick = () => {
-    colocarModelo(producto);
-    unidadCargada.push(producto);
-  };
-
-  contenedorModelos.append(contenedor);
-}
 
 // Insercion en Box
 
@@ -185,6 +193,7 @@ const colocarModelo = (producto) => {
     ? (contenedorModelos.style.display = "none") &&
       (botonContinuar.style.display = "flex")
     : (botonContinuar.style.display = "none"); // Product Storage
+
   localStorage.setItem("unidadesCargadas", JSON.stringify(producto));
   const traerJSON = localStorage.getItem("unidadesCargadas");
   // console.log(traerJSON); // Me devuelve un String.

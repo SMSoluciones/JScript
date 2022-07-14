@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "modelo": "New ISIDRO",
+    "chasis": "Mercedes Benz O500",
+    "image": "Imagen1"
+  },
+  {
+    "id": 2,
+    "modelo": "ISIDRO",
+    "chasis": "Scania K400",
+    "image": "Imagen2"
+  },
+  {
+    "id": 3,
+    "modelo": "AVANTI",
+    "chasis": "Mercedes Benz M",
+    "image": "Imagen3"
+  },
+  {
+    "id": 4,
+    "modelo": "AVANTI 15M",
+    "chasis": "Mercedes Benz O500",
+    "image": "Imagen4"
+  },
+  {
+    "id": 5,
+    "modelo": "CENTO",
+    "chasis": "Mercedes Benz OF1721",
+    "image": "Imagen4"
+  }
+]
